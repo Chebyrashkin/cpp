@@ -1,16 +1,15 @@
 #include <iostream>
 using namespace std;
 
-bool is_power_of_two(int n) {
-    if (n <= 0) return false;
-    if (n == 1) return true;
-    if (n % 2 != 0) return false;
-    return is_power_of_two(n / 2);
+void reverse_print(int arr[], int n) {
+    if (n == 0) return;
+    cout << arr[n - 1] << ' ';
+    reverse_print(arr, n - 1);
 }
 
 int main() {
-    int N;
-    cin >> N;
-    cout << (is_power_of_two(N) ? "YES" : "NO") << endl;
+    int a[] = {1, 2, 3, 4, 5};
+    int n = size(a);
+    reverse_print(a, n);
     return 0;
 }

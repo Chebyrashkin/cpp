@@ -22,11 +22,6 @@ private:
 public:
     Set() : data(nullptr), size(0), capacity(0) {}
 
-    Set(const Set& other) : data(nullptr), size(0), capacity(0) {
-        for (int i = 0; i < other.size; ++i)
-            add(*other.data[i]);
-    }
-
     Set& operator=(const Set& other) {
         if (this != &other) {
             Set tmp(other);
@@ -320,14 +315,14 @@ int main() {
     demo_Set_int();
     demo_Set_Matrix();
     demo_Set_char();
-
+ 
     cout << "\nСтатический счётчик суммарного количества элементов матриц\n";
     {
         SquareMatrix sq(3);
         DiagonalMatrix diag(4);
         cout << "После создания sq(3) и diag(4): totalElements = "
              << Matrix::getTotalElements() << "\n";
-        SquareMatrix sq2(2, 5);
+        SquareMatrix sq2(2);
         cout << "После добавления sq2(2): totalElements = "
              << Matrix::getTotalElements() << "\n";
     }

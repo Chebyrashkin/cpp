@@ -1,3 +1,5 @@
+//Вычислить произведение n ≥ 2 (n четное) сомножителей
+
 #include <iostream>
 using namespace std;
 

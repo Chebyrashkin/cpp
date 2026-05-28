@@ -1,3 +1,5 @@
+//Вычислить 𝑦 = 𝑥^𝑎 по следующему алгоритму:
+
 #include <iostream>
 using namespace std;
 

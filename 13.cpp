@@ -1,3 +1,19 @@
+/*
+a) Разработайте абстрактный тип данных множество set. Дополнительно
+перегрузить следующие операции:
+> проверка на принадлежность (типа операции in множественного типа);
+*  пересечение множеств;
+<  проверка на подмножество
+b) Разработайте иерархию классов матричные структуры (приватные
+члены сконструировать самостоятельно). Добавьте статические члены по
+подсчету суммарного количества элементов. Разработайте не менее 2-х
+виртуальных функций.
+c) Создайте шаблонный класс множества матриц различных видов,
+множества символов чисел. Продемонстрируйте работу класса и все его
+операции. 
+*/
+
+
 #include <iostream>
 #include <cstring>
 
@@ -65,7 +81,7 @@ public:
     friend bool operator>(const T& elem, const Set<T>& set) {
         return set.contains(elem);
     }
-
+    
     friend Set<T> operator*(const Set<T>& a, const Set<T>& b) {
         Set<T> result;
         for (int i = 0; i < a.size; ++i) {
@@ -118,11 +134,13 @@ class SquareMatrix : public Matrix {
 private:
     int** data;
 public:
+
     SquareMatrix() : Matrix(1,1) {
         data = new int*[1];
         data[0] = new int[1];
         data[0][0] = 0;
     }
+
     SquareMatrix(int n) : Matrix(n, n) {
         data = new int*[rows_];
         for (int i = 0; i < rows_; ++i) {
@@ -234,11 +252,11 @@ public:
     }
 };
 
-inline ostream& operator<<(ostream& os, const SquareMatrix& m) {
+ostream& operator<<(ostream& os, const SquareMatrix& m) {
     m.print();
     return os;
 }
-inline ostream& operator<<(ostream& os, const DiagonalMatrix& m) {
+ostream& operator<<(ostream& os, const DiagonalMatrix& m) {
     m.print();
     return os;
 }

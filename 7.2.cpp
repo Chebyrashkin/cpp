@@ -1,3 +1,5 @@
+//Реализовать обобщенную функцию печати значения функции от аргумента
+
 #include <iostream>
 #include <cmath>
 using namespace std;

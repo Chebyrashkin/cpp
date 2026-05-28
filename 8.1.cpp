@@ -1,3 +1,5 @@
+Вычислить значение 𝑥 = √𝑎, используя формулу
+
 #include <iostream>
 using namespace std;
 

@@ -1,3 +1,5 @@
+//Вывести массив в обратном порядке
+
 #include <iostream>
 using namespace std;
 

@@ -1,3 +1,6 @@
+//Дан текст. Сколько в тексте слов начинаются и заканчиваются на одну и ту
+//же букву.
+
 #include <iostream>
 #include <string>
 using namespace std;
